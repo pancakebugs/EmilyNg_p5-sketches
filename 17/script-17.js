@@ -1,27 +1,30 @@
-// var fr = 0
 
+var eImg;
+var squareSize = 10;
+var slipDistance = 0;
+
+function preload() {
+	eImg = loadImage('assets/Eimg2.png');
+}
 
 function setup() {
-	createCanvas(1000,1000)
-	background(200,100,100)
+	createCanvas(1000,1000);
+	background(0);
+	noStroke();
 
-fill(215,200,190)
-	noStroke()
-	// X, Y, Width, Height
-	rect(350,300, 100,400)
-	rect(445,300,150,30)
-	rect(445,670,150,30)
+	frameRate(150)
 
-	circle(600,380, 160,160)
-	circle(510,500,100,100)
-	circle(600,620, 160,160)
+	image(eImg,370,160)
 
 
 
+}
 
+function draw() {
+		var randomLeft = random(0,width)
+		var randomRight = random(0, height)
+		square = eImg.get(randomLeft,randomRight,squareSize,squareSize);
+		image(square,randomLeft+random(-slipDistance,slipDistance),randomRight+random(-slipDistance,slipDistance))
 
-//function mousePressed() {
-	//saveCanvas("s1","png")
-								//to save image when clicked
 
 }

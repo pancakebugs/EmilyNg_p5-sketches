@@ -1,27 +1,55 @@
-// var fr = 0
-
-
 function setup() {
-	createCanvas(1000,1000)
-	background(200,100,100)
+  createCanvas(1000, 1000, WEBGL);
+}
 
-fill(215,200,190)
-	noStroke()
-	// X, Y, Width, Height
-	rect(350,300, 100,400)
-	rect(445,300,150,30)
-	rect(445,670,150,30)
+function draw() {
 
-	circle(600,380, 160,160)
-	circle(510,500,100,100)
-	circle(600,620, 160,160)
+push();
+  translate(-100,-20)
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.0);
+  // cylinder(30, 150);
 
+    translate(-100,250)
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.0);
+  cylinder(20, 100);
+pop();
 
+push();
+  translate(0,20)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  // cylinder(30, 150);
 
+    translate(200,250)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  cylinder(20, 50);
+pop();
 
+push();
+  translate(0,0)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  // cylinder(30, 150);
 
-//function mousePressed() {
-	//saveCanvas("s1","png")
-								//to save image when clicked
+    translate(200,0)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  cylinder(20, 50);
+pop();
+
+push();
+  translate(0,-20)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  // cylinder(30, 150);
+
+    translate(200,-250)
+  rotateX(frameCount * 0.0);
+  rotateY(frameCount * 0.01);
+  cylinder(20, 50);
+pop();
 
 }
